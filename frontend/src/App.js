@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Search from './components/Search';
 import ImageCard from './components/ImageCard';
+import Welcome from './components/Welcome';
 import { useState } from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 // {} is not needed for header bcs it is exported as default
@@ -35,15 +36,16 @@ function App() {// can also be written as const App ]()=>
             <Header title='Images Gallery' />
             <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit} />
             <Container className='mt-4'>
-                <Row xs={1} md={2} lg={3}> 
-                    
+                {images.length ?
+                    (<Row xs={1} md={2} lg={3}>
                         {images.map((image, i) => (
                             <Col key={i} className='pb-3'>
                                 <ImageCard image={image} deleteImage={handleDeleteImage} />
                             </Col>
                         ))}
-                    
-                </Row>
+                    </Row>)
+                    : (<Welcome />)
+                }
             </Container>      
         </div>
   );
