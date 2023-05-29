@@ -3,8 +3,9 @@
     "",
     "\\frontend",
     "\\frontend\\public",
-    "\\frontend\\src"
+    "\\frontend\\src",
+    "\\frontend\\src\\components"
   ],
-  "SelectedNode": "\\frontend\\.gitignore",
+  "SelectedNode": "\\frontend\\src\\components\\ImageCard.js",
   "PreviewInSolutionExplorer": false
 }
