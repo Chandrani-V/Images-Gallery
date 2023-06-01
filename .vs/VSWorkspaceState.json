@@ -1,11 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\frontend",
-    "\\frontend\\public",
-    "\\frontend\\src",
-    "\\frontend\\src\\components"
+    "\\api",
+    "\\api\\.venv",
+    "\\api\\.venv\\Lib\\site-packages",
+    "\\api\\.venv\\Lib\\site-packages\\setuptools",
+    "\\api\\.venv\\src",
+    "\\Local settings (.vs)",
+    "\\Local settings (.vs)\\Udemy react app\\config",
+    "\\Local settings (.vs)\\Udemy react app\\FileContentIndex",
+    "\\Local settings (.vs)\\Udemy react app\\v17"
   ],
-  "SelectedNode": "\\frontend\\src\\components\\ImageCard.js",
+  "SelectedNode": "\\api\\.venv\\Lib",
   "PreviewInSolutionExplorer": false
 }
