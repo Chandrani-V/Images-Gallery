@@ -8,15 +8,16 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 // {} is not needed for header bcs it is exported as default
 
 //const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY
-const KEY ='sZ8dJDtqgbQxmuzzy1iVdUDjk3Bh4pDGhz0XbnA5MOw'
+
+const API_URL=process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
+
 function App() {// can also be written as const App ]()=>
     const [word, setWord] = useState('');//initial value
     const [images, setImages] = useState([]);
-    //console.log(images)
     const handleSearchSubmit = (e) => {
         e.preventDefault()
         //returns promise and ` is used for sring literals in JS
-        fetch(`https://api.unsplash.com/photos/random/?query=${word}&client_id=${KEY}`)
+        fetch(`${API_URL}/new-image?query=${word}`)
             .then((res)=>res.json()) //executed when promise is resolved, this agains return promise 
             .then((data) => {//promise resolved
                 setImages([{...data,title:word }, ...images])// 3 dots indicates array spread
