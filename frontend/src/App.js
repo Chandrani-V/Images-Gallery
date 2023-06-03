@@ -4,12 +4,12 @@ import Search from './components/Search';
 import ImageCard from './components/ImageCard';
 import Welcome from './components/Welcome';
 import { useState } from 'react'
-import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+import { Container, Row, Col} from 'react-bootstrap'
 // {} is not needed for header bcs it is exported as default
 
 //const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY
 
-const API_URL=process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
+const API_URL=process.env.REACT_APP_API_URL || 'http://127.0.0.1:5050';
 
 function App() {// can also be written as const App ]()=>
     const [word, setWord] = useState('');//initial value
