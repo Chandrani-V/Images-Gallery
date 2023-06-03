@@ -8,7 +8,7 @@ import os
 load_dotenv(dotenv_path="./.env.local")
 UNSPLASH_URL='https://api.unsplash.com/photos/random'
 UNSPLASH_KEY=os.environ.get("UNSPLASH_KEY","")
-DEBUG=os.environ.get("DEBUG",True)
+DEBUG=bool(os.environ.get("DEBUG",True))
 
 if not UNSPLASH_KEY:
     raise EnvironmentError("Please add UNSPLASH KEY to .env.local")
@@ -30,4 +30,4 @@ def new_image():
     return response.json()
 
 if __name__=="__main__":
-    app.run()
+    app.run(host='0.0.0.0',port=5050)
