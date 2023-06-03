@@ -14,11 +14,11 @@ const Search = ({ word, setWord, handleSubmit }) => {
                                     value={word}
                                     //onchange event will be triggered and on event it sets word
                                     onChange={(e)=>setWord(e.target.value)}
-                                    placeholder="Search for New image"
+                                    placeholder="Search for New image 2"
                                 />
                             </Col>
                             <Col>
-                                <Button variant="primary" type='submit'>Search</Button>
+                                <Button variant="primary" type='submit'>Search Again</Button>
                             </Col>
                         </Form.Group>
                     </Form>
